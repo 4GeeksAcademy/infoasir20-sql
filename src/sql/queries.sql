@@ -50,8 +50,13 @@ limit 5;
 
 
 -- MISSION 6:  
--- Your query here;
-
+-- Your query here;  Queremos identificar a los observadores más activos. 
+-- ¿Quiénes son las personas que más registros de observación han realizado?
+SELECT observations.observer, COUNT(*) AS total
+FROM observations
+GROUP BY observations.observer
+ORDER BY total DESC
+LIMIT 10;
 
 -- MISSION 7: 
 -- Your query here;
